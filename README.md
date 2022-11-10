@@ -17,17 +17,19 @@ make build
 * We are going to assume we have 2 clusters: **remote** and **local**
 * The controller will ultimately run on the **local** cluster, but it will also connect and watch the **remote** cluster.
 
-### Create local cluster (if required)
-
-```
-kind create cluster -n local
-kind get kubeconfig -n local > local.kubeconfig
-```
+### Cluster setup
 
 Let's say we have 2 KUBECONFIG files:
 
 - local.kubeconfig
 - remote.kubeconfig
+
+#### Create local cluster (if required)
+
+```
+kind create cluster -n local
+kind get kubeconfig -n local > local.kubeconfig
+```
 
 ### Apply CRDs to both clusters
 
