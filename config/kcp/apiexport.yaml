@@ -1,0 +1,6 @@
+# Controller APIExport
+apiVersion: apis.kcp.dev/v1alpha1
+kind: APIExport
+metadata:
+  name: internal-services-controller.appstudio.redhat.com
+spec:

@@ -1,0 +1,13 @@
+---
+apiVersion: apis.kcp.dev/v1alpha1
+kind: APIBinding
+metadata:
+  name: internal-services-controller-internal-services-controller.appstudio.redhat.com
+spec:
+  reference:
+    workspace:
+      path: WORKSPACE
+      exportName: internal-services-controller-internal-services-controller.appstudio.redhat.com
+  permissionClaims:
+  # TODO (user)
+

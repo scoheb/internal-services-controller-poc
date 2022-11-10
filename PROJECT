@@ -1,0 +1,18 @@
+componentConfig: true
+domain: appstudio.redhat.com
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.kcp.io/v1: {}
+projectName: internal-services-controller
+repo: github.com/hacbs-release/internal-services-controller
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: appstudio.redhat.com
+  kind: Request
+  path: github.com/hacbs-release/internal-services-controller/api/v1alpha1
+  version: v1alpha1
+version: "3"

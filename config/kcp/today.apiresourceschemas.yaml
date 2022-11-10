@@ -1,0 +1,56 @@
+apiVersion: apis.kcp.dev/v1alpha1
+kind: APIResourceSchema
+metadata:
+  creationTimestamp: null
+  name: today.requests.appstudio.redhat.com
+spec:
+  group: appstudio.redhat.com
+  names:
+    kind: Request
+    listKind: RequestList
+    plural: requests
+    singular: request
+  scope: Namespaced
+  versions:
+  - name: v1alpha1
+    schema:
+      description: Request is the Schema for the requests API
+      properties:
+        apiVersion:
+          description: 'APIVersion defines the versioned schema of this representation
+            of an object. Servers should convert recognized schemas to the latest
+            internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+          type: string
+        kind:
+          description: 'Kind is a string value representing the REST resource this
+            object represents. Servers may infer this from the endpoint the client
+            submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+          type: string
+        metadata:
+          type: object
+        spec:
+          description: RequestSpec defines the desired state of Request
+          properties:
+            foo:
+              description: Foo is an example field of Request. Edit request_types.go
+                to remove/update
+              type: string
+          required:
+          - foo
+          type: object
+        status:
+          description: RequestStatus defines the observed state of Request
+          properties:
+            seen:
+              description: 'INSERT ADDITIONAL STATUS FIELD - define observed state
+                of cluster Important: Run "make" to regenerate code after modifying
+                this file'
+              type: string
+          type: object
+      type: object
+    served: true
+    storage: true
+    subresources:
+      status: {}
+
+---
